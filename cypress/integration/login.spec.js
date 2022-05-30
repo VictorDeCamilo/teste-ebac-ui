@@ -6,6 +6,10 @@ context('Funcionalidade: login', () => {
         cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
     });
     
+    afterEach(() => {
+        cy.screenshot()
+    });
+    
     it('Login com sucesso', () => {
         cy.get('#username').clear().type('aluno_ebac@teste.com')
         cy.get('#password').clear().type('teste@teste.com')
