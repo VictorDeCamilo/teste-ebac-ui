@@ -9,15 +9,19 @@ describe('Funcionalidade: Pré-cadastro', () => {
     });
 
     it('Pré-cadastro com sucesso', () => {
-        cy.get('#reg_email').clear().type(faker.internet.email())
+        const sobrenomeFaker = faker.name.lastName()
+        const nomeFaker = faker.name.firstName()
+        const emailFaker = faker.internet.email(nomeFaker)
+
+        cy.get('#reg_email').clear().type(emailFaker)
         cy.get('#reg_password').clear().type('senha222senha')
         cy.get('.button[name="register"]').should('be.visible').click()
 
         cy.get('.woocommerce-MyAccount-navigation-link--edit-account > a')
             .click()
 
-        cy.get('#account_first_name').clear().type(faker.name.firstName())
-        cy.get('#account_last_name').clear().type(faker.name.lastName())
+        cy.get('#account_first_name').clear().type(nomeFaker)
+        cy.get('#account_last_name').clear().type(sobrenomeFaker)
         cy.get('.woocommerce-Button').should('be.visible').click()
 
         cy.get('.woocommerce-message')
