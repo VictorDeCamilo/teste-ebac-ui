@@ -3,7 +3,7 @@
 describe('Funcionalidade: Página de produtos', () => {
 
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/produtos/')
+        cy.visit('produtos')
     });
 
     it('Deve selecionar um produto', () => {
@@ -12,15 +12,15 @@ describe('Funcionalidade: Página de produtos', () => {
             .click()
     });
 
-    it.only('Deve adicionar um produto ao carrinho', () => {
-        const nomeProduto = 'Ajax Full-Zip Sweatshirt'
+    it('Deve adicionar um produto ao carrinho', () => {
+        const nomeProduto = 'Abominable Hoodie'
         const quantidade = 2
 
         cy.get('[class="product-block grid"]')
-            .eq(3)
+            .eq(0)
             .click()
 
-        cy.get('.button-variable-item-M').click()
+        cy.get('.button-variable-item-XS').click()
         cy.get('.button-variable-item-Red').click()
         cy.get('.input-text').clear().type(quantidade)
         cy.get('.single_add_to_cart_button').click()
