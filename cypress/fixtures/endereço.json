@@ -1,0 +1,42 @@
+[
+    {
+        "nome": "Augusto",
+        "sobrenome": "Renato",
+        "empresa": "EBAC",
+        "pais": "Brasil",
+        "endereco": "Avenida Paulista",
+        "numeroEnd": "2000",
+        "cidade": "São Paulo",
+        "estado": "São Paulo",
+        "cep":"01000100",
+        "telefone": "11983395565",
+        "email": "testes@testes.com"
+    },
+    {
+        "nome": "Renato",
+        "sobrenome": "Augusto",
+        "empresa": "EBAC",
+        "endereco": "Avenida Paulista",
+        "numero": "2000",
+        "pais": "Brasil",
+        "cidade": "São Paulo",
+        "estado": "São Paulo",
+        "cep":"01000100",
+        "telefone": "11983395565",
+        "email": "testes2@testes.com"
+    },
+    {
+        "nome": "Willian",
+        "sobrenome": "Augusto",
+        "empresa": "EBAC",
+        "endereco": "Avenida Paulista",
+        "numero": "2000",
+        "pais": "Brasil",
+        "cidade": "São Paulo",
+        "estado": "São Paulo",
+        "cep":"01000100",
+        "telefone": "11983395565",
+        "email": "testes3@testes.com"
+    }
+
+]
