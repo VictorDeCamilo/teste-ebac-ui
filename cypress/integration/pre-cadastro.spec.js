@@ -28,4 +28,12 @@ describe('Funcionalidade: Pré-cadastro', () => {
         .should('be.visible')
         .and('contain', 'Detalhes da conta modificados com sucesso.')
     });
+    
+    it.only('Pré-cadastro com sucesso usando custom commands', () => {
+        cy.preCadastro('email3@email.com', 'Nome', 'Sobrenome')
+        
+        cy.get('.woocommerce-message')
+        .should('be.visible')
+        .and('contain', 'Detalhes da conta modificados com sucesso.')
+    });
 });

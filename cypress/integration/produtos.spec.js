@@ -28,4 +28,11 @@ describe('Funcionalidade: Página de produtos', () => {
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
         cy.get('.woocommerce-message').should('contain', nomeProduto)
     });
+
+    it('Adicionar produto ao carrinho usando custom commands', () => {
+        cy.addProdutos('Abominable Hoodie', 'XS', 'Red', 3)
+
+        cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
+        cy.get('.woocommerce-message').should('contain', nomeProduto)
+    });
 });
